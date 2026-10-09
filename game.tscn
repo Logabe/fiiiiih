@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://718xxwnfplri"]
+
+[ext_resource type="Script" uid="uid://cblimthhkdgjd" path="res://boat.gd" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://c8ekvptlqr8y8" path="res://assets/boat.png" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bylfns1qqpyyd" path="res://constellation/npc fish.tscn" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://cg8ws44cmk4o1" path="res://constellation/npc_fish.gd" id="4_fc0e3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fc0e3"]
+height = 60.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qwf25"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t1rg7"]
+radius = 10736.399
+
+[sub_resource type="Curve2D" id="Curve2D_t1rg7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -74, 439, -347, -8.084999, 347, 8.084999, 578, 322, 0, 0, 0, 0, 1214, 439)
+}
+point_count = 3
+
+[node name="Node" type="Node" unique_id=1682928601]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1516438273]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1686115420]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=781017471]
+position = Vector2(589, 62)
+shape = SubResource("CapsuleShape2D_fc0e3")
+script = ExtResource("1_80nbo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D" unique_id=996908829]
+position = Vector2(1.0000267, 0.99999803)
+rotation = 3.1415927
+scale = Vector2(0.1998822, 0.19851251)
+texture = ExtResource("2_e2o6t")
+
+[node name="cast origin" type="Node2D" parent="Area2D/CollisionShape2D" unique_id=1166363507]
+
+[node name="cast point" type="Area2D" parent="Area2D/CollisionShape2D/cast origin" unique_id=812872440]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/CollisionShape2D/cast origin/cast point" unique_id=593283574]
+shape = SubResource("CircleShape2D_qwf25")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D/cast origin/cast point" unique_id=245929851]
+position = Vector2(0, 1)
+scale = Vector2(0.28738266, 0.28738266)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=513951473]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2" unique_id=1068900465]
+position = Vector2(591, 11292)
+shape = SubResource("CircleShape2D_t1rg7")
+
+[node name="Path2D" type="Path2D" parent="Area2D2/CollisionShape2D2" unique_id=1154422864]
+position = Vector2(-591, -11292)
+curve = SubResource("Curve2D_t1rg7")
+
+[node name="PathFollow2D" parent="Area2D2/CollisionShape2D2/Path2D" unique_id=2109637838 instance=ExtResource("3_feb5d")]
+position = Vector2(-74, 439)
+rotation = -0.38919544
+scale = Vector2(0.18916525, 0.27845535)
+script = ExtResource("4_fc0e3")
+
+[connection signal="area_entered" from="Area2D/CollisionShape2D/cast origin/cast point" to="Area2D/CollisionShape2D" method="_on_cast_point_area_entered"]

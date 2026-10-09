@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dgmljcrccubyi"]
+
+[ext_resource type="Texture2D" uid="uid://040qdaemso0d" path="res://icon.svg" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://e8y405k25fqk" path="res://playButton.gd" id="2_7vrkn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t1rg7"]
+font_size = 40
+outline_size = 13
+outline_color = Color(0.28706437, 0.048218966, 0.99999994, 1)
+
+[node name="main menu" type="Node" unique_id=7319491]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=135625861]
+modulate = Color(1, 1, 1, 0.35686275)
+position = Vector2(576, 326)
+scale = Vector2(9, 5.0625)
+texture = ExtResource("1_06t4h")
+
+[node name="fish game title" type="Label" parent="." unique_id=989043251]
+offset_top = 51.0
+offset_right = 1152.0
+offset_bottom = 114.0
+text = "[fish game title here]"
+label_settings = SubResource("LabelSettings_t1rg7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=809653130]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -163.5
+offset_top = 152.0
+offset_right = 163.5
+offset_bottom = 221.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "play........"
+script = ExtResource("2_7vrkn")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
