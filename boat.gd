@@ -50,6 +50,7 @@ func _on_game_won():
 	var scene = preload("res://pop-up ui.tscn").instantiate()
 	add_sibling(scene)
 	await scene.done
+	scene.queue_free()
 	close_game()
 	
 func close_game():
