@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bv0ondo37lft5"]
+
+[ext_resource type="Texture2D" uid="uid://e5a7nnr4chb1" path="res://assets/default fish number two.webp" id="1_pudsg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t1rg7"]
+radius = 112.0
+height = 502.0
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=1859915848]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1352296993]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2144214094]
+rotation = 4.712389
+scale = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_t1rg7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D" unique_id=1334938299]
+rotation = 1.5707964
+texture = ExtResource("1_pudsg")

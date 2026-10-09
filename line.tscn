@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b4iqelygsqkx4"]
+
+[ext_resource type="Script" uid="uid://duantusab5wkr" path="res://line_2d.gd" id="1_084u5"]
+
+[sub_resource type="Curve2D" id="Curve2D_yf8mb"]
+_data = {
+"points": PackedVector2Array(-86.7354, 62.04547, 86.7354, -62.04547, 0, 0, 0, 0, 0, 0, 152, -62, -34.988045, -78.49646, 34.988045, 78.49646, 301, -1)
+}
+point_count = 3
+
+[node name="Path2D" type="Path2D" unique_id=2041683925]
+curve = SubResource("Curve2D_yf8mb")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=653721363]
+points = PackedVector2Array(0, 0)
+script = ExtResource("1_084u5")
