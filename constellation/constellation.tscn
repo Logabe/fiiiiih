@@ -26,6 +26,9 @@ scale_max = 1.1
 scale_curve = SubResource("CurveTexture_5rmyi")
 
 [node name="Constellation" type="Control" unique_id=1474401824]
+process_mode = 3
+z_index = 5
+custom_minimum_size = Vector2(1152, 648)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,7 +58,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 0.1254902)
+color = Color(0, 0, 0, 0.5019608)
 
 [node name="Label" type="Label" parent="." unique_id=1468269791]
 layout_mode = 1

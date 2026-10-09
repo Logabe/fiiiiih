@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cblimthhkdgjd" path="res://boat.gd" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://c8ekvptlqr8y8" path="res://assets/boat.png" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://hjlhjyg3k0lh" path="res://assets/bobber.webp" id="3_7jktm"]
 [ext_resource type="PackedScene" uid="uid://bylfns1qqpyyd" path="res://constellation/npc fish.tscn" id="3_feb5d"]
 [ext_resource type="Script" uid="uid://cg8ws44cmk4o1" path="res://constellation/npc_fish.gd" id="4_fc0e3"]
 
@@ -49,7 +50,8 @@ shape = SubResource("CircleShape2D_qwf25")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D/cast origin/cast point" unique_id=245929851]
 position = Vector2(0, 1)
-scale = Vector2(0.28738266, 0.28738266)
+scale = Vector2(0.09966777, 0.09966779)
+texture = ExtResource("3_7jktm")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=513951473]
 
