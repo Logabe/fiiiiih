@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 			get_tree().paused = true
 			var biggie = currentFish.is_in_group("big_fish")
 			if biggie:
-				scene.pattern = scene.patterns["delphinus"]
+				scene.pattern = scene.patterns["capricorn"]
 			add_sibling(scene)
 			scene.global_position = Vector2.ZERO
 			scene.won.connect(_on_game_won if biggie else close_game)

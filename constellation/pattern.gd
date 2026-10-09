@@ -2,8 +2,8 @@ class_name Pattern
 extends Resource
 
 @export var points: PackedVector2Array
-@export var last_point: int = -1 # -1 -> no end
+@export var second_line: PackedVector2Array
 
-func _init(p_points = PackedVector2Array(), p_last_point = -1):
+func _init(p_points = PackedVector2Array(), p_last_point = -1, p_line2 = PackedVector2Array()):
 	points = p_points
-	last_point = p_last_point
+	second_line = p_line2

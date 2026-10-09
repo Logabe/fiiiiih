@@ -15,7 +15,9 @@ var connected_counter = 0
 
 var can_draw = false
 var center = Vector2(1152, 648) / 2
-var pattern
+var pattern: Pattern
+
+var nth = 0
 
 func _ready() -> void:
 	if pattern:
@@ -23,15 +25,17 @@ func _ready() -> void:
 	else:
 		for i in 3 + int(sqrt(Globals.fish_caught)):
 			points.append(Vector2(randf_range(-300, 300), randf_range(-300, 300)) + center)
+	
+	show_stars()
 
+func show_stars():
+	added_counter = 0
+	can_draw=false
 	var tween = create_tween()
 	for point in points:
 		tween.tween_callback(add_point)
 		tween.tween_interval(delay)
 	
-	if pattern and pattern.last_point != -1:
-		tween.tween_callback(twinkle.bind(pattern.last_point))
-		points.append(points[pattern.last_point])
 	reel.add_point(get_global_mouse_position())
 	await tween.finished
 	can_draw = true
@@ -42,10 +46,19 @@ func _process(delta: float) -> void:
 		_set_end_pos(get_global_mouse_position())
 
 func add_point():
-	var star: Area2D = preload("res://constellation/star.tscn").instantiate()
-	star.position = points[added_counter]
-	star.mouse_entered.connect(_mouse_entered.bind(star))
-	add_child(star)
+	var pos = points[added_counter]
+	var query = get_children().find_custom(func(x): return x.position.distance_squared_to(pos) <25)
+	
+	var star
+	if query != -1:
+		star = get_children()[query]
+		if star not in stars:
+			stars.append(star)
+	else:
+		star = preload("res://constellation/star.tscn").instantiate()
+		star.position = pos
+		star.mouse_entered.connect(_mouse_entered.bind(star))
+		add_child(star)
 	stars.append(star)
 	added_counter += 1
 	
@@ -69,10 +82,20 @@ func _mouse_entered(node: Area2D):
 			can_draw = false
 			var tween = create_tween()
 			tween.tween_property(reel, "default_color", Color.GOLD, 1)
-			tween.tween_interval(0.5)
-			tween.tween_callback(won.emit)
-			tween.tween_callback(queue_free)
-			Globals.fish_caught += 1
+			if nth == 0 and pattern.second_line:
+				points = pattern.second_line.duplicate()
+				nth = 1
+				connected_counter = 0
+				reel = Line2D.new()
+				reel.width = 2
+				stars = []
+				add_child(reel)
+				show_stars()
+			else:
+				tween.tween_interval(0.5)
+				tween.tween_callback(won.emit)
+				tween.tween_callback(queue_free)
+				Globals.fish_caught += 1
 			
 	elif node != stars[connected_counter-1]:
 		reel.default_color = Color.RED
@@ -83,13 +106,6 @@ func _mouse_entered(node: Area2D):
 		tween.tween_interval(1)
 		tween.tween_callback(lost.emit)
 		tween.tween_callback(queue_free)
-
-func twinkle(last_point: int):
-	var tween = create_tween()
-	var node = stars[last_point]
-
-	tween.tween_property(node , "scale", Vector2(1.5, 1.5), 0.3)
-	tween.tween_property(node , "scale", Vector2(1, 1), 0.3)
 	
 func _set_end_pos(pos: Vector2):
 	reel.set_point_position(reel.get_point_count()-1, pos)

@@ -4,6 +4,5 @@
 
 [resource]
 script = ExtResource("1_ekj6o")
-points = PackedVector2Array(749, 527, 670, 291, 627, 190, 502, 173, 560, 256)
-last_point = 1
+points = PackedVector2Array(749, 527, 670, 291, 627, 190, 502, 173, 560, 256, 670, 291)
 metadata/_custom_type_script = "uid://dgxd1fbsca2l5"
