@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bmvhe1umstb2q" path="res://pop_up_ui.gd" id="1_li60o"]
 [ext_resource type="Texture2D" uid="uid://cayl64xhg1u5l" path="res://assets/planet cards/1neptune.png" id="2_li60o"]
-[ext_resource type="Script" uid="uid://bdpnsqugnfqnl" path="res://color_rect.gd" id="3_li60o"]
 
 [sub_resource type="Animation" id="Animation_6lfyy"]
 length = 0.36666667
@@ -58,12 +57,14 @@ _data = {
 &"large-lore": SubResource("Animation_eqmmp")
 }
 
-[node name="PopUpUi" type="Node2D" unique_id=465276927]
+[node name="PopUpUi" type="Node2D" unique_id=465276927 node_paths=PackedStringArray("flip", "info_card")]
 process_mode = 3
 z_index = 20
 script = ExtResource("1_li60o")
+flip = NodePath("ColorRect/flip")
+info_card = NodePath("ColorRect")
 
-[node name="ColorRect" type="TextureRect" parent="." unique_id=1978852124 node_paths=PackedStringArray("flip", "info_card")]
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1978852124]
 offset_left = 449.0
 offset_top = 59.0
 offset_right = 768.79004
@@ -71,9 +72,6 @@ offset_bottom = 573.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 offset_transform_enabled = true
 texture = ExtResource("2_li60o")
-script = ExtResource("3_li60o")
-flip = NodePath("flip")
-info_card = NodePath(".")
 
 [node name="flip" type="AnimationPlayer" parent="ColorRect" unique_id=921213544]
 libraries/ = SubResource("AnimationLibrary_eqmmp")

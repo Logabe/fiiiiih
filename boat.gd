@@ -49,7 +49,7 @@ func _on_cast_point_area_exited(area: Area2D) -> void:
 func _on_game_won():
 	var scene = preload("res://pop-up ui.tscn").instantiate()
 	add_sibling(scene)
-	await scene.visibility_changed
+	await scene.done
 	close_game()
 	
 func close_game():
