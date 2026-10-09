@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bj73v3whhtm48" path="res://cool ass fish.tscn" id="9_215e1"]
 [ext_resource type="PackedScene" uid="uid://b7cpc5hqwsise" path="res://goat fish.tscn" id="9_lc2xo"]
 [ext_resource type="Script" uid="uid://deliax7l4afx4" path="res://spawner.gd" id="10_hve3p"]
+[ext_resource type="Script" uid="uid://bjsllvckk6gye" path="res://label.gd" id="14_215e1"]
 
 [sub_resource type="Curve2D" id="Curve2D_t1rg7"]
 _data = {
@@ -213,6 +214,12 @@ position = Vector2(-2, 17)
 rotation = 3.1415927
 scale = Vector2(0.076962106, 0.076962106)
 texture = ExtResource("4_ryrav")
+
+[node name="Label" type="Label" parent="." unique_id=1518759610]
+offset_right = 195.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 30
+script = ExtResource("14_215e1")
 
 [connection signal="area_entered" from="Area2D/CollisionShape2D/cast origin/cast point" to="Area2D/CollisionShape2D" method="_on_cast_point_area_entered"]
 [connection signal="area_exited" from="Area2D/CollisionShape2D/cast origin/cast point" to="Area2D/CollisionShape2D" method="_on_cast_point_area_exited"]

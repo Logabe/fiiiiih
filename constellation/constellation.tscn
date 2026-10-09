@@ -51,10 +51,6 @@ patterns = Dictionary[String, ExtResource("2_kksla")]({
 [node name="Reel" type="Line2D" parent="." unique_id=1989771868]
 width = 2.0
 
-[node name="Line2D" type="Line2D" parent="." unique_id=1628883100]
-points = PackedVector2Array(420, 254, 700, 358, 797, 426, 811, 478)
-closed = true
-
 [node name="Backdrop" type="ColorRect" parent="." unique_id=901419387]
 z_index = -1
 layout_mode = 1
