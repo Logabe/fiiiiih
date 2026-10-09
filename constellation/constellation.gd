@@ -1,7 +1,7 @@
 extends Control
 # hi this is logan. this code ugly af
 
-@export var delay = .6
+@export var delay = .7
 @onready var reel = $Reel
 @export var patterns: Dictionary[String, Pattern]
 
@@ -42,6 +42,11 @@ func add_point():
 	add_child(star)
 	stars.append(star)
 	added_counter += 1
+	
+	var tween = create_tween()
+	tween.tween_property(star, "scale", Vector2(1.5, 1.5), 0.3)
+	tween.tween_property(star, "scale", Vector2(1, 1), 0.3)
+	
 
 func _mouse_entered(node: Area2D):
 	if !can_draw:
@@ -56,7 +61,8 @@ func _mouse_entered(node: Area2D):
 		
 		if connected_counter >= len(points):
 			can_draw = false
-	elif connected_counter == -1:
+			create_tween().tween_property(reel, "default_color", Color.GOLD, 1)
+	elif node != stars[connected_counter-1]:
 		reel.default_color = Color.RED
 		can_draw = false
 		_set_end_pos(node.position)
