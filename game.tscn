@@ -28,9 +28,15 @@ point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_e8heu"]
 _data = {
-"points": PackedVector2Array(-234.26428, -9.549092, 234.26428, 9.549092, 1226, 420.00012, -169.67932, 7.7530875, 169.67932, -7.7530875, -132.00003, 407)
+"points": PackedVector2Array(-234.26428, -9.549092, 234.26428, 9.549092, 1246, 408.00012, -169.67932, 7.7530875, 169.67932, -7.7530875, -132.00003, 407)
 }
 point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_rvswv"]
+_data = {
+"points": PackedVector2Array(-21.964264, -193.24907, 21.964264, 193.24907, 1248, 531, 25.639992, 123.420006, -25.639992, -123.420006, -253.00003, 574, -55.260002, 26.619997, 55.260002, -26.619997, -159.00003, 433, -104.3393, -213.67691, 104.3393, 213.67691, 1245, 391)
+}
+point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_vef74"]
 _data = {
@@ -105,6 +111,13 @@ curve = SubResource("Curve2D_e8heu")
 script = ExtResource("10_hve3p")
 OFFSET_RANGE = 2000
 FISH_COUNT = 27
+
+[node name="npcfish area 5" type="Path2D" parent="background/Area2D2" unique_id=1602166727]
+position = Vector2(104.99986, 2080)
+curve = SubResource("Curve2D_rvswv")
+script = ExtResource("10_hve3p")
+OFFSET_RANGE = 700
+FISH_COUNT = 30
 
 [node name="dolphin path" type="Path2D" parent="background" unique_id=2085426965]
 curve = SubResource("Curve2D_vef74")
