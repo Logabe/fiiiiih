@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyyasig72h866"
-path="res://.godot/imported/3capricornus.png-3edc17c601a81f0f959220a8670b22f0.ctex"
+uid="uid://xya53tioq7bp"
+path="res://.godot/imported/aries.png-134d28e4b00bf29bb4165bcd915c5e2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/constellation cards/3capricornus.png"
-dest_files=["res://.godot/imported/3capricornus.png-3edc17c601a81f0f959220a8670b22f0.ctex"]
+source_file="res://assets/constellation cards/aries.png"
+dest_files=["res://.godot/imported/aries.png-134d28e4b00bf29bb4165bcd915c5e2f.ctex"]
 
 [params]
 

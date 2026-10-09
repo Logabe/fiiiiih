@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xya53tioq7bp"
-path="res://.godot/imported/5aries.png-c487a6b96209329262fc54473a626626.ctex"
+uid="uid://bc48vkqitr0pd"
+path="res://.godot/imported/aquila.png-61c6d71bb77a2d8bd949fd1b0d4bf378.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/constellation cards/5aries.png"
-dest_files=["res://.godot/imported/5aries.png-c487a6b96209329262fc54473a626626.ctex"]
+source_file="res://assets/planet cards/aquila.png"
+dest_files=["res://.godot/imported/aquila.png-61c6d71bb77a2d8bd949fd1b0d4bf378.ctex"]
 
 [params]
 

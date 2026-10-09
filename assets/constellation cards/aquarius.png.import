@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djagbeakvggcd"
-path="res://.godot/imported/1delphinus.png-21911e5b734c7006648ece65df23813b.ctex"
+uid="uid://bd0aqf7a206u2"
+path="res://.godot/imported/aquarius.png-87063c1e986385337758b7fa17887b7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/constellation cards/1delphinus.png"
-dest_files=["res://.godot/imported/1delphinus.png-21911e5b734c7006648ece65df23813b.ctex"]
+source_file="res://assets/constellation cards/aquarius.png"
+dest_files=["res://.godot/imported/aquarius.png-87063c1e986385337758b7fa17887b7e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brbfwqb2gxq6o"
-path="res://.godot/imported/4aquila.png-3e13fca9e28201338f886f6a3a3d9060.ctex"
+path="res://.godot/imported/aquila.png-805889ee3e221c291942c4ea54ec59ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/constellation cards/4aquila.png"
-dest_files=["res://.godot/imported/4aquila.png-3e13fca9e28201338f886f6a3a3d9060.ctex"]
+source_file="res://assets/constellation cards/aquila.png"
+dest_files=["res://.godot/imported/aquila.png-805889ee3e221c291942c4ea54ec59ef.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cayl64xhg1u5l"
-path="res://.godot/imported/1neptune.png-0fa59ab764519ab3fd5111b502126d2a.ctex"
+uid="uid://dm1tstovvm42d"
+path="res://.godot/imported/aquarius.png-2d3ac5495774f06b6c170ef0c92d3447.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/planet cards/1neptune.png"
-dest_files=["res://.godot/imported/1neptune.png-0fa59ab764519ab3fd5111b502126d2a.ctex"]
+source_file="res://assets/planet cards/aquarius.png"
+dest_files=["res://.godot/imported/aquarius.png-2d3ac5495774f06b6c170ef0c92d3447.ctex"]
 
 [params]
 

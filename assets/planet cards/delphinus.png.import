@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u5m87v4a20kv"
-path="res://.godot/imported/3saturn.png-564989765df1ac4bef2cd5fccda435b6.ctex"
+uid="uid://cayl64xhg1u5l"
+path="res://.godot/imported/delphinus.png-aa5e6b82e7a86186ca470c41ccd39d56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/planet cards/3saturn.png"
-dest_files=["res://.godot/imported/3saturn.png-564989765df1ac4bef2cd5fccda435b6.ctex"]
+source_file="res://assets/planet cards/delphinus.png"
+dest_files=["res://.godot/imported/delphinus.png-aa5e6b82e7a86186ca470c41ccd39d56.ctex"]
 
 [params]
 

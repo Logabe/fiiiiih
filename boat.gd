@@ -49,6 +49,8 @@ func _on_cast_point_area_exited(area: Area2D) -> void:
 func _on_game_won():
 	var scene = preload("res://pop-up ui.tscn").instantiate()
 	add_sibling(scene)
+	scene.front_tex = load("res://assets/constellation cards/%s.png" % currentFish.get_parent().id)
+	scene.back_tex = load("res://assets/planet cards/%s.png" % currentFish.get_parent().id)
 	await scene.done
 	scene.queue_free()
 	close_game()

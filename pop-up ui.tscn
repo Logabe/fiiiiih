@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b228glwfdpniu"]
 
 [ext_resource type="Script" uid="uid://bmvhe1umstb2q" path="res://pop_up_ui.gd" id="1_li60o"]
-[ext_resource type="Texture2D" uid="uid://cayl64xhg1u5l" path="res://assets/planet cards/1neptune.png" id="2_li60o"]
+[ext_resource type="Texture2D" uid="uid://cayl64xhg1u5l" path="res://assets/planet cards/delphinus.png" id="2_li60o"]
 
 [sub_resource type="Animation" id="Animation_6lfyy"]
 length = 0.36666667

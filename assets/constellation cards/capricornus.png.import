@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfpsatdn7aw5q"
-path="res://.godot/imported/5mars.png-afbdeb6947efaf8f919164d1df6490a9.ctex"
+uid="uid://dyyasig72h866"
+path="res://.godot/imported/capricornus.png-c9738d01c0236cf3904edaa39e883940.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/planet cards/5mars.png"
-dest_files=["res://.godot/imported/5mars.png-afbdeb6947efaf8f919164d1df6490a9.ctex"]
+source_file="res://assets/constellation cards/capricornus.png"
+dest_files=["res://.godot/imported/capricornus.png-c9738d01c0236cf3904edaa39e883940.ctex"]
 
 [params]
 

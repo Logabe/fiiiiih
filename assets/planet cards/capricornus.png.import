@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm1tstovvm42d"
-path="res://.godot/imported/2uranus.png-5d5e9a63b16e1e32bbe4c1c6eac21181.ctex"
+uid="uid://u5m87v4a20kv"
+path="res://.godot/imported/capricornus.png-4867edb93735c14698cf09804270b4dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/planet cards/2uranus.png"
-dest_files=["res://.godot/imported/2uranus.png-5d5e9a63b16e1e32bbe4c1c6eac21181.ctex"]
+source_file="res://assets/planet cards/capricornus.png"
+dest_files=["res://.godot/imported/capricornus.png-4867edb93735c14698cf09804270b4dc.ctex"]
 
 [params]
 
