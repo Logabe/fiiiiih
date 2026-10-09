@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Input.is_action_just_pressed("left_click"):
 		if fliped == true: #flips to constlations
 			flip.play("flip")
 			info_card.texture = load("res://assets/planet cards/4jupiter.png")
