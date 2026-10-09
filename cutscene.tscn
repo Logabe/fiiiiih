@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b55gnis6sun0r"]
+
+[ext_resource type="Texture2D" uid="uid://ba3ylr6kbyk5r" path="res://assets/cutscene/1.png" id="1_ye7fo"]
+[ext_resource type="Script" uid="uid://bc8t0v0bvobq6" path="res://cutscene.gd" id="2_ix241"]
+
+[node name="Cutscene" type="Node2D" unique_id=1469965862 node_paths=PackedStringArray("slide")]
+script = ExtResource("2_ix241")
+slide = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1060712492]
+offset_right = 1150.0
+offset_bottom = 654.0
+texture = ExtResource("1_ye7fo")
