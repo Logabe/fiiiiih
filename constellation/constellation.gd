@@ -17,6 +17,11 @@ func _ready() -> void:
 	for point in points:
 		tween.tween_callback(add_point)
 		tween.tween_interval(delay)
+	
+	reel.add_point(get_global_mouse_position())
+
+func _process(delta: float) -> void:
+	_set_end_pos(get_global_mouse_position())
 
 func add_point():
 	var star: Area2D = preload("res://constellation/star.tscn").instantiate()
@@ -26,8 +31,19 @@ func add_point():
 	added_counter += 1
 
 func _mouse_entered(node: Area2D):
-	if node.position == points[connected_counter]:
+	if added_counter != len(points):
+		return
+	
+	var index = points.find(node.position)
+	if index == connected_counter:
+		_set_end_pos(node.position)
+
 		reel.add_point(node.position)
-		connected_counter += 1;
-	else:
+		connected_counter += 1
+		if connected_counter >= len(points):
+			queue_free() # uhh u win
+	elif index > connected_counter:
 		get_tree().quit() # crash for now
+
+func _set_end_pos(pos: Vector2):
+	reel.set_point_position(reel.get_point_count()-1, pos)
