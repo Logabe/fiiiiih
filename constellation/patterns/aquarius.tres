@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Pattern" format=3 uid="uid://vj63k1ylkom4"]
+
+[ext_resource type="Script" uid="uid://dgxd1fbsca2l5" path="res://constellation/pattern.gd" id="1_g8nco"]
+
+[resource]
+script = ExtResource("1_g8nco")
+points = PackedVector2Array(957, 380, 784, 309, 648, 222, 567, 193, 552, 216, 582, 238, 648, 222, 602, 341, 458, 340, 370, 318, 346, 547, 784, 309)
+second_line = PackedVector2Array(458, 340, 473, 437, 454, 474, 358, 370, 398, 563)
+metadata/_custom_type_script = "uid://dgxd1fbsca2l5"

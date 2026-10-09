@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bh4ywp3rtoent" path="res://constellation/constellation.gd" id="1_4v48o"]
 [ext_resource type="Script" uid="uid://dgxd1fbsca2l5" path="res://constellation/pattern.gd" id="2_kksla"]
 [ext_resource type="Resource" uid="uid://bq304slphbfv0" path="res://constellation/patterns/delphinus.tres" id="3_7v1li"]
-[ext_resource type="Resource" uid="uid://vj63k1ylkom4" path="res://constellation/patterns/capricorn.tres" id="4_i288s"]
+[ext_resource type="Resource" uid="uid://vj63k1ylkom4" path="res://constellation/patterns/aquarius.tres" id="4_i288s"]
 [ext_resource type="Texture2D" uid="uid://d2k3yhchd02dd" path="res://constellation/star_3.png" id="4_mf4yv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4v48o"]
@@ -47,8 +47,7 @@ patterns = Dictionary[String, ExtResource("2_kksla")]({
 width = 2.0
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1628883100]
-visible = false
-points = PackedVector2Array(458, 340, 473, 437, 454, 474, 358, 370, 398, 563)
+points = PackedVector2Array(420, 254, 700, 358, 797, 426, 811, 478)
 closed = true
 
 [node name="Backdrop" type="ColorRect" parent="." unique_id=901419387]
