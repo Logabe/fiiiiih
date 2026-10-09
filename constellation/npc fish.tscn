@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bylfns1qqpyyd"]
 
+[ext_resource type="Script" uid="uid://cg8ws44cmk4o1" path="res://constellation/npc_fish.gd" id="1_i7d3o"]
 [ext_resource type="Texture2D" uid="uid://di03ipqr1y6q0" path="res://assets/default fish.webp" id="1_s0nb8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t1rg7"]
@@ -7,6 +8,8 @@ radius = 105.0
 height = 504.0
 
 [node name="PathFollow2D" type="PathFollow2D" unique_id=2109637838]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_i7d3o")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1221102824]
 collision_layer = 2

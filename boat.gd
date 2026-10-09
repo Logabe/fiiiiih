@@ -3,7 +3,7 @@ var castPoint
 var castOrigin
 var initialClickPos
 var isCastIntersectingFish
-var currentFish # the fish that's currently on the line
+var currentFish: Node # the fish that's currently on the line
 @onready var line: Line2D = $Line2D
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +13,7 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	line.visible = Input.is_action_pressed("left_click")
 	
 	if Input.is_action_just_pressed("left_click"):
 		initialClickPos = get_viewport().get_mouse_position()
@@ -28,10 +29,13 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_released("left_click"):
 		if isCastIntersectingFish == true:
 			var scene = preload("res://constellation/constellation.tscn").instantiate()
+			get_tree().paused = true
+			var biggie = currentFish.is_in_group("big_fish")
+			if biggie:
+				scene.pattern = scene.patterns["delphinus"]
 			add_sibling(scene)
 			scene.global_position = Vector2.ZERO
-			get_tree().paused = true
-			scene.won.connect(_on_game_won)
+			scene.won.connect(_on_game_won if biggie else close_game)
 			scene.lost.connect(close_game)
 
 func _on_cast_point_area_entered(area: Area2D) -> void:
@@ -45,6 +49,7 @@ func _on_cast_point_area_exited(area: Area2D) -> void:
 func _on_game_won():
 	var scene = preload("res://pop-up ui.tscn").instantiate()
 	add_sibling(scene)
+	await scene.visibility_changed
 	close_game()
 	
 func close_game():

@@ -13,21 +13,23 @@ var stars = []
 var added_counter = 0
 var connected_counter = 0
 
-var center = Vector2(1152, 648) / 2
 var can_draw = false
+var center = Vector2(1152, 648) / 2
+var pattern
 
 func _ready() -> void:
-	var pattern = patterns["delphinus"]
-	points = pattern.points.duplicate()
-	#for i in 5:
-		#points.append(Vector2(randf_range(-300, 300), randf_range(-300, 300)) + center)
-	
+	if pattern:
+		points = pattern.points.duplicate()
+	else:
+		for i in 3 + int(sqrt(Globals.fish_caught)):
+			points.append(Vector2(randf_range(-300, 300), randf_range(-300, 300)) + center)
+
 	var tween = create_tween()
 	for point in points:
 		tween.tween_callback(add_point)
 		tween.tween_interval(delay)
 	
-	if pattern.last_point != -1:
+	if pattern and pattern.last_point != -1:
 		tween.tween_callback(twinkle.bind(pattern.last_point))
 		points.append(points[pattern.last_point])
 	reel.add_point(get_global_mouse_position())
@@ -70,6 +72,7 @@ func _mouse_entered(node: Area2D):
 			tween.tween_interval(0.5)
 			tween.tween_callback(won.emit)
 			tween.tween_callback(queue_free)
+			Globals.fish_caught += 1
 			
 	elif node != stars[connected_counter-1]:
 		reel.default_color = Color.RED

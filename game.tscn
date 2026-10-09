@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://cg8ws44cmk4o1" path="res://constellation/npc_fish.gd" id="4_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://dd8stvvirhvg6" path="res://assets/bronana.png" id="4_ryrav"]
 [ext_resource type="PackedScene" uid="uid://cp7mv8t5wvaol" path="res://dolphin.tscn" id="5_j5wjh"]
+[ext_resource type="Script" uid="uid://deliax7l4afx4" path="res://spawner.gd" id="10_hve3p"]
 
 [sub_resource type="Curve2D" id="Curve2D_t1rg7"]
 _data = {
@@ -52,7 +53,6 @@ curve = SubResource("Curve2D_t1rg7")
 position = Vector2(-74, 439)
 rotation = -0.38919544
 scale = Vector2(0.09374661, 0.13799703)
-script = ExtResource("4_fc0e3")
 
 [node name="Path2D" type="Path2D" parent="background" unique_id=2085426965]
 curve = SubResource("Curve2D_vef74")
@@ -110,12 +110,7 @@ shape = SubResource("CircleShape2D_t1rg7")
 [node name="Path2D" type="Path2D" parent="Area2D2/CollisionShape2D2" unique_id=420509954]
 position = Vector2(-591, -11292)
 curve = SubResource("Curve2D_t1rg7")
-
-[node name="PathFollow2D" parent="Area2D2/CollisionShape2D2/Path2D" unique_id=535311910 instance=ExtResource("3_feb5d")]
-position = Vector2(-74, 439)
-rotation = -0.38919544
-scale = Vector2(0.09374661, 0.13799703)
-script = ExtResource("4_fc0e3")
+script = ExtResource("10_hve3p")
 
 [connection signal="area_entered" from="Area2D/CollisionShape2D/cast origin/cast point" to="Area2D/CollisionShape2D" method="_on_cast_point_area_entered"]
 [connection signal="area_exited" from="Area2D/CollisionShape2D/cast origin/cast point" to="Area2D/CollisionShape2D" method="_on_cast_point_area_exited"]
