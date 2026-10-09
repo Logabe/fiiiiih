@@ -5,6 +5,8 @@
 [ext_resource type="Resource" uid="uid://bq304slphbfv0" path="res://constellation/patterns/delphinus.tres" id="3_7v1li"]
 [ext_resource type="Resource" uid="uid://vj63k1ylkom4" path="res://constellation/patterns/aquarius.tres" id="4_i288s"]
 [ext_resource type="Texture2D" uid="uid://d2k3yhchd02dd" path="res://constellation/star_3.png" id="4_mf4yv"]
+[ext_resource type="Resource" uid="uid://dphxic37uakda" path="res://constellation/patterns/aquila.tres" id="5_cp7k4"]
+[ext_resource type="Resource" uid="uid://df7t2urhwfup7" path="res://constellation/patterns/aries.tres" id="6_okqmh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4v48o"]
 font_size = 32
@@ -39,6 +41,9 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_4v48o")
 patterns = Dictionary[String, ExtResource("2_kksla")]({
+"aquarius": ExtResource("4_i288s"),
+"aquila": ExtResource("5_cp7k4"),
+"aries": ExtResource("6_okqmh"),
 "capricorn": ExtResource("4_i288s"),
 "delphinus": ExtResource("3_7v1li")
 })

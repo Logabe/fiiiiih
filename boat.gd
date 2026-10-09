@@ -30,12 +30,12 @@ func _process(delta: float) -> void:
 		if isCastIntersectingFish == true:
 			var scene = preload("res://constellation/constellation.tscn").instantiate()
 			get_tree().paused = true
-			var biggie = currentFish.is_in_group("big_fish")
-			if biggie:
-				scene.pattern = scene.patterns["capricorn"]
+			var id = currentFish.get_parent().id
+			if id:
+				scene.pattern = scene.patterns[id]
 			add_sibling(scene)
 			scene.global_position = Vector2.ZERO
-			scene.won.connect(_on_game_won if biggie else close_game)
+			scene.won.connect(_on_game_won if id else close_game)
 			scene.lost.connect(close_game)
 
 func _on_cast_point_area_entered(area: Area2D) -> void:

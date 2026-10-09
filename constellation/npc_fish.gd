@@ -1,5 +1,6 @@
 extends PathFollow2D
 
+@export var id: String
 @export var speed = 100
 var randNum = RandomNumberGenerator.new()
 

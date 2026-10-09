@@ -127,6 +127,7 @@ position = Vector2(-625.99976, 2691.0002)
 rotation = 0.8112471
 scale = Vector2(0.81568956, 0.81568956)
 script = ExtResource("4_fc0e3")
+id = "delphinus"
 speed = 69
 
 [node name="stringray path" type="Path2D" parent="background" unique_id=2100861106]
@@ -138,6 +139,7 @@ curve = SubResource("Curve2D_iotsf")
 position = Vector2(-625.99976, 2691.0002)
 rotation = 0.420584
 script = ExtResource("4_fc0e3")
+id = "aquarius"
 
 [node name="goat path" type="Path2D" parent="background" unique_id=512644493]
 position = Vector2(225.99986, -1293.9998)
@@ -149,6 +151,7 @@ position = Vector2(1357.4401, 2721.98)
 rotation = 2.6968
 scale = Vector2(0.74852484, 0.74852484)
 script = ExtResource("4_fc0e3")
+id = "capricorn"
 
 [node name="sunfish path" type="Path2D" parent="background" unique_id=1858336925]
 position = Vector2(196.99982, -1893.9998)
@@ -159,6 +162,7 @@ curve = SubResource("Curve2D_lc2xo")
 position = Vector2(1357.4401, 2721.98)
 rotation = 3.1321533
 script = ExtResource("4_fc0e3")
+id = "aquila"
 
 [node name="cool ass fish path" type="Path2D" parent="background" unique_id=1560291533]
 position = Vector2(-1560.0002, -2511.9995)
@@ -170,6 +174,7 @@ curve = SubResource("Curve2D_7sc4i")
 position = Vector2(1357.4401, 2721.98)
 rotation = 0.6438475
 script = ExtResource("4_fc0e3")
+id = "aries"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1686115420]
 

@@ -82,7 +82,7 @@ func _mouse_entered(node: Area2D):
 			can_draw = false
 			var tween = create_tween()
 			tween.tween_property(reel, "default_color", Color.GOLD, 1)
-			if nth == 0 and pattern.second_line:
+			if nth == 0 and pattern and pattern.second_line:
 				points = pattern.second_line.duplicate()
 				nth = 1
 				connected_counter = 0
