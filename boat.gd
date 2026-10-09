@@ -4,6 +4,7 @@ var castOrigin
 var initialClickPos
 var isCastIntersectingFish
 var currentFish # the fish that's currently on the line
+@onready var line: Line2D = $Line2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,8 +21,9 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_pressed("left_click"):
 		var whereIsPointerRightNowQuestionMark = get_viewport().get_mouse_position()
-		castPoint.position = castOrigin.position + (initialClickPos + (-1 * whereIsPointerRightNowQuestionMark))
-	
+		var bobber_pos = castOrigin.position + (initialClickPos + (-1 * whereIsPointerRightNowQuestionMark))
+		castPoint.position = bobber_pos
+		line.set_point_position(1, bobber_pos)
 	
 	elif Input.is_action_just_released("left_click"):
 		if isCastIntersectingFish == true:
