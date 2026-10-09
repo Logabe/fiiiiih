@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bj73v3whhtm48"]
+
+[ext_resource type="Texture2D" uid="uid://df42cgw846kfi" path="res://assets/cool ass fish.webp" id="1_mbkv2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_frutr"]
+radius = 94.0
+height = 282.0
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=1859915848]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1352296993]
+rotation = 0.070283145
+scale = Vector2(1, -1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2144214094]
+rotation = 4.712389
+scale = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_frutr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D" unique_id=1334938299]
+rotation = 1.5707964
+scale = Vector2(0.8630111, 0.8630111)
+texture = ExtResource("1_mbkv2")

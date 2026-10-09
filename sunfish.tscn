@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dwfulwbifmgqq"]
+
+[ext_resource type="Texture2D" uid="uid://dhn4gkmviskd" path="res://assets/sun fish.webp" id="1_ywhjk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u5kul"]
+radius = 95.0
+height = 190.0
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=1859915848]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1352296993]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2144214094]
+rotation = 4.712389
+scale = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_u5kul")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D" unique_id=1334938299]
+rotation = 1.5707964
+scale = Vector2(0.8630111, 0.8630111)
+texture = ExtResource("1_ywhjk")

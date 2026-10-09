@@ -1,6 +1,7 @@
 extends Path2D
 
-const OFFSET_RANGE = 500
+@export var OFFSET_RANGE = 500
+@export var FISH_COUNT = 10
 const TEXTURES= ["res://assets/default fish.webp", "res://assets/default fish number two.webp"]
 
 # Called when the node enters the scene tree for the first time.
@@ -8,7 +9,7 @@ func _ready() -> void:
 	var prefab = preload("res://constellation/npc fish.tscn")
 	var mult = 1
 	if randf() > 0.5: mult = -1
-	for i in 10:
+	for i in FISH_COUNT:
 		var node = prefab.instantiate()
 		node.get_node("Area2D/CollisionShape2D/Sprite2D").texture = load(TEXTURES[randi_range(0, 1)])
 	

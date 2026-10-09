@@ -5,12 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://c8ekvptlqr8y8" path="res://assets/boat.png" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://d281flss3vomo" path="res://background.gd" id="2_eow3j"]
 [ext_resource type="Texture2D" uid="uid://hjlhjyg3k0lh" path="res://assets/bobber.webp" id="3_7jktm"]
-[ext_resource type="PackedScene" uid="uid://bylfns1qqpyyd" path="res://constellation/npc fish.tscn" id="3_feb5d"]
 [ext_resource type="Script" uid="uid://cg8ws44cmk4o1" path="res://constellation/npc_fish.gd" id="4_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://bv0ondo37lft5" path="res://default fish 2.tscn" id="4_mfdv2"]
 [ext_resource type="Texture2D" uid="uid://dd8stvvirhvg6" path="res://assets/bronana.png" id="4_ryrav"]
 [ext_resource type="PackedScene" uid="uid://cp7mv8t5wvaol" path="res://dolphin.tscn" id="5_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://bpavpxf7nkc5x" path="res://stingraaayayyyy.tscn" id="8_iotsf"]
+[ext_resource type="PackedScene" uid="uid://dwfulwbifmgqq" path="res://sunfish.tscn" id="8_lc2xo"]
+[ext_resource type="PackedScene" uid="uid://bj73v3whhtm48" path="res://cool ass fish.tscn" id="9_215e1"]
+[ext_resource type="PackedScene" uid="uid://b7cpc5hqwsise" path="res://goat fish.tscn" id="9_lc2xo"]
 [ext_resource type="Script" uid="uid://deliax7l4afx4" path="res://spawner.gd" id="10_hve3p"]
 
 [sub_resource type="Curve2D" id="Curve2D_t1rg7"]
@@ -18,6 +19,18 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -74, 439, -347, -8.084999, 347, 8.084999, 578, 322, 0, 0, 0, 0, 1214, 439)
 }
 point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_80cx4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -221.00003, 549, -234.26428, -9.549092, 234.26428, 9.549092, 150.99997, 384, -178.05283, -5.8564105, 178.05283, 5.8564105, 535.99994, 500, -169.67932, 7.7530875, 169.67932, -7.7530875, 943, 368, 0, 0, 0, 0, 1299.9999, 511.00012)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_e8heu"]
+_data = {
+"points": PackedVector2Array(-234.26428, -9.549092, 234.26428, 9.549092, 1226, 420.00012, -169.67932, 7.7530875, 169.67932, -7.7530875, -132.00003, 407)
+}
+point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_vef74"]
 _data = {
@@ -31,6 +44,24 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="Curve2D" id="Curve2D_215e1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1357.4401, 2721.98, 160.71962, 52.799824, -160.71962, -52.799824, 751.09094, 2881.5889, 189.00609, 64.62907, -189.00609, -64.62907, 558.42834, 2571.861, 196.03526, -72.252426, -196.03526, 72.252426, 161.36737, 2577.0376, 137.46536, -54.189316, -137.46536, 54.189316, 7.8241577, 2882.4517, 0, 0, 0, 0, -653.2921, 2740.9607)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_lc2xo"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1357.4401, 2721.98, 0, 0, 0, 0, -653.2921, 2740.9607)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_7sc4i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1357.4401, 2721.98, -49.76321, 30.960514, 49.76321, -30.960514, 1621.9304, 2852.1812, -87.01484, 45.108067, 87.01484, -45.108067, 1661.7473, 2626.5476, 0, 0, 0, 0, 1778.9861, 2609.5054, -99.83371, -102.14662, 99.83371, 102.14662, 1906.9216, 2617.1665, -8.316111, -55.4293, 8.316111, 55.4293, 1920.9268, 2814.3972, 0, 0, 0, 0, 2006.3241, 2862.5564, -59.67265, 49.601646, 59.67265, -49.601646, 2115.2312, 2857.8447, 3.1576004, 37.314182, -3.1576004, -37.314182, 2192.5774, 2732.3147, -28.921576, 11.438495, 28.921576, -11.438495, 2238.0122, 2662.5742, -83.999504, -23.044432, 83.999504, 23.044432, 2322.9644, 2648.2085, -39.4959, -64.91973, 39.4959, 64.91973, 2396.4045, 2786.7512, 0, 0, 0, 0, 2488.1416, 2840.433, 0, 0, 0, 0, 2698.6882, 2800.2568, 0, 0, 0, 0, 2865.1582, 2692.351)
+}
+point_count = 15
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fc0e3"]
 height = 60.0
 
@@ -39,9 +70,9 @@ height = 60.0
 [node name="Node" type="Node" unique_id=1682928601]
 
 [node name="background" type="TextureRect" parent="." unique_id=906487219]
-offset_left = 1153.0
+offset_left = 1152.0
 offset_top = 3535.0
-offset_right = 2305.0
+offset_right = 2304.0
 offset_bottom = 7070.0
 rotation = 3.1415927
 texture = ExtResource("1_ryrav")
@@ -51,43 +82,80 @@ script = ExtResource("2_eow3j")
 position = Vector2(1153.0004, 3535)
 rotation = 3.1415925
 
-[node name="Path2D" type="Path2D" parent="background/Area2D2" unique_id=1154422864]
+[node name="npc fish area 1" type="Path2D" parent="background/Area2D2" unique_id=1154422864]
 curve = SubResource("Curve2D_t1rg7")
 script = ExtResource("10_hve3p")
 
-[node name="PathFollow2D" parent="background/Area2D2/Path2D" unique_id=2109637838 instance=ExtResource("3_feb5d")]
-position = Vector2(-74, 439)
-rotation = -0.38919544
-scale = Vector2(0.09374661, 0.13799703)
-
-[node name="Path2D2" type="Path2D" parent="background/Area2D2" unique_id=632381171]
+[node name="npcfish area 2" type="Path2D" parent="background/Area2D2" unique_id=632381171]
 position = Vector2(0.99997294, 426)
 curve = SubResource("Curve2D_t1rg7")
 script = ExtResource("10_hve3p")
+OFFSET_RANGE = 2000
 
-[node name="PathFollow2D" parent="background/Area2D2/Path2D2" unique_id=1859915848 instance=ExtResource("4_mfdv2")]
-position = Vector2(-74, 439)
-rotation = -0.38919544
-scale = Vector2(0.14302938, 0.14302938)
-script = ExtResource("4_fc0e3")
+[node name="npcfish area 3" type="Path2D" parent="background/Area2D2" unique_id=1178934596]
+position = Vector2(17.99994, 949)
+curve = SubResource("Curve2D_80cx4")
+script = ExtResource("10_hve3p")
+OFFSET_RANGE = 1500
+FISH_COUNT = 20
 
-[node name="Path2D" type="Path2D" parent="background" unique_id=2085426965]
+[node name="npcfish area 4" type="Path2D" parent="background/Area2D2" unique_id=2027487945]
+position = Vector2(28.9999, 1558)
+curve = SubResource("Curve2D_e8heu")
+script = ExtResource("10_hve3p")
+OFFSET_RANGE = 2000
+FISH_COUNT = 27
+
+[node name="dolphin path" type="Path2D" parent="background" unique_id=2085426965]
 curve = SubResource("Curve2D_vef74")
 
-[node name="PathFollow2D" parent="background/Path2D" unique_id=833807290 instance=ExtResource("5_j5wjh")]
+[node name="dolhpin" parent="background/dolphin path" unique_id=833807290 instance=ExtResource("5_j5wjh")]
 position = Vector2(-625.99976, 2691.0002)
 rotation = 0.8112471
 scale = Vector2(0.81568956, 0.81568956)
 script = ExtResource("4_fc0e3")
+speed = 69
 
-[node name="Path2D2" type="Path2D" parent="background" unique_id=2100861106]
+[node name="stringray path" type="Path2D" parent="background" unique_id=2100861106]
 position = Vector2(-24.906845, -1006.7478)
 scale = Vector2(1.0225132, 1.1590828)
 curve = SubResource("Curve2D_iotsf")
 
-[node name="PathFollow2D" parent="background/Path2D2" unique_id=827790163 instance=ExtResource("8_iotsf")]
+[node name="stingray" parent="background/stringray path" unique_id=827790163 instance=ExtResource("8_iotsf")]
 position = Vector2(-625.99976, 2691.0002)
 rotation = 0.420584
+script = ExtResource("4_fc0e3")
+
+[node name="goat path" type="Path2D" parent="background" unique_id=512644493]
+position = Vector2(225.99986, -1293.9998)
+scale = Vector2(1.0225132, 1.1590828)
+curve = SubResource("Curve2D_215e1")
+
+[node name="goat" parent="background/goat path" unique_id=565143567 instance=ExtResource("9_lc2xo")]
+position = Vector2(1357.4401, 2721.98)
+rotation = 2.6968
+scale = Vector2(0.74852484, 0.74852484)
+script = ExtResource("4_fc0e3")
+
+[node name="sunfish path" type="Path2D" parent="background" unique_id=1858336925]
+position = Vector2(196.99982, -1893.9998)
+scale = Vector2(1.0225132, 1.1590828)
+curve = SubResource("Curve2D_lc2xo")
+
+[node name="sunfish" parent="background/sunfish path" unique_id=1859915848 instance=ExtResource("8_lc2xo")]
+position = Vector2(1357.4401, 2721.98)
+rotation = 3.1321533
+script = ExtResource("4_fc0e3")
+
+[node name="cool ass fish path" type="Path2D" parent="background" unique_id=1560291533]
+position = Vector2(-1560.0002, -2511.9995)
+rotation = 0.006281905
+scale = Vector2(1.0225132, 1.1590828)
+curve = SubResource("Curve2D_7sc4i")
+
+[node name="cool ass fish" parent="background/cool ass fish path" unique_id=390466361 instance=ExtResource("9_215e1")]
+position = Vector2(1357.4401, 2721.98)
+rotation = 0.6438475
 script = ExtResource("4_fc0e3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1686115420]
