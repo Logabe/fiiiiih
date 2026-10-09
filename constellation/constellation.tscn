@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dcp3dem3wpldw"]
+
+[ext_resource type="Script" uid="uid://bh4ywp3rtoent" path="res://constellation/constellation.gd" id="1_4v48o"]
+
+[node name="Constellation" type="Node2D" unique_id=1362579977]
+script = ExtResource("1_4v48o")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=901419387]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.1254902)
+
+[node name="Reel" type="Line2D" parent="." unique_id=1989771868]
+width = 2.0
