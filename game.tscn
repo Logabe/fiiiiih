@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bv0ondo37lft5" path="res://default fish 2.tscn" id="4_mfdv2"]
 [ext_resource type="Texture2D" uid="uid://dd8stvvirhvg6" path="res://assets/bronana.png" id="4_ryrav"]
 [ext_resource type="PackedScene" uid="uid://cp7mv8t5wvaol" path="res://dolphin.tscn" id="5_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://bpavpxf7nkc5x" path="res://stingraaayayyyy.tscn" id="8_iotsf"]
 [ext_resource type="Script" uid="uid://deliax7l4afx4" path="res://spawner.gd" id="10_hve3p"]
 
 [sub_resource type="Curve2D" id="Curve2D_t1rg7"]
@@ -23,6 +24,12 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -625.99976, 2691.0002, -818.16766, -4.4914637, 818.16766, 4.4914637, 544.0003, 3066, 0, 0, 0, 0, 1563.0002, 2725)
 }
 point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_iotsf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -625.99976, 2691.0002, 0, 0, 0, 0, 23.380615, 2981.4507, -332.81085, 104.84946, 332.81085, -104.84946, 544.6454, 3028.0393, 0, 0, 0, 0, 1203.8057, 3016.8235, 0, 0, 0, 0, 1396.4683, 2931.4111)
+}
+point_count = 5
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fc0e3"]
 height = 60.0
@@ -71,6 +78,16 @@ curve = SubResource("Curve2D_vef74")
 position = Vector2(-625.99976, 2691.0002)
 rotation = 0.8112471
 scale = Vector2(0.81568956, 0.81568956)
+script = ExtResource("4_fc0e3")
+
+[node name="Path2D2" type="Path2D" parent="background" unique_id=2100861106]
+position = Vector2(-24.906845, -1006.7478)
+scale = Vector2(1.0225132, 1.1590828)
+curve = SubResource("Curve2D_iotsf")
+
+[node name="PathFollow2D" parent="background/Path2D2" unique_id=827790163 instance=ExtResource("8_iotsf")]
+position = Vector2(-625.99976, 2691.0002)
+rotation = 0.420584
 script = ExtResource("4_fc0e3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1686115420]
