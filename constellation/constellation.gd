@@ -18,7 +18,7 @@ var can_draw = false
 
 func _ready() -> void:
 	var pattern = patterns["delphinus"]
-	points = pattern.points
+	points = pattern.points.duplicate()
 	#for i in 5:
 		#points.append(Vector2(randf_range(-300, 300), randf_range(-300, 300)) + center)
 	
