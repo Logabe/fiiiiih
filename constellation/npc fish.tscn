@@ -9,6 +9,7 @@ height = 504.0
 [node name="PathFollow2D" type="PathFollow2D" unique_id=2109637838]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1221102824]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1833635112]
 rotation = 1.5707964

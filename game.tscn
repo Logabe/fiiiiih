@@ -42,6 +42,7 @@ texture = ExtResource("2_e2o6t")
 [node name="cast origin" type="Node2D" parent="Area2D/CollisionShape2D" unique_id=1166363507]
 
 [node name="cast point" type="Area2D" parent="Area2D/CollisionShape2D/cast origin" unique_id=812872440]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/CollisionShape2D/cast origin/cast point" unique_id=593283574]
 shape = SubResource("CircleShape2D_qwf25")
@@ -63,7 +64,8 @@ curve = SubResource("Curve2D_t1rg7")
 [node name="PathFollow2D" parent="Area2D2/CollisionShape2D2/Path2D" unique_id=2109637838 instance=ExtResource("3_feb5d")]
 position = Vector2(-74, 439)
 rotation = -0.38919544
-scale = Vector2(0.18916525, 0.27845535)
+scale = Vector2(0.09374661, 0.13799703)
 script = ExtResource("4_fc0e3")
 
 [connection signal="area_entered" from="Area2D/CollisionShape2D/cast origin/cast point" to="Area2D/CollisionShape2D" method="_on_cast_point_area_entered"]
+[connection signal="area_exited" from="Area2D/CollisionShape2D/cast origin/cast point" to="Area2D/CollisionShape2D" method="_on_cast_point_area_exited"]
