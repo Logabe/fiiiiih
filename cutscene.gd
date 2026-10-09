@@ -18,6 +18,9 @@ func _process(delta: float) -> void:
 		slide.texture = load("res://assets/cutscene/3.png")
 	elif num == 3:
 		slide.texture = load("res://assets/cutscene/4.png")
+	elif num == 4:
+		slide.visible = false
+		get_tree().change_scene_to_file("res://game.tscn")
 		
 			
 	
