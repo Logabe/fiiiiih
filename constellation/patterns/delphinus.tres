@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Pattern" format=3 uid="uid://bq304slphbfv0"]
+
+[ext_resource type="Script" uid="uid://dgxd1fbsca2l5" path="res://constellation/pattern.gd" id="1_ekj6o"]
+
+[resource]
+script = ExtResource("1_ekj6o")
+points = PackedVector2Array(749, 527, 670, 291, 627, 190, 502, 173, 560, 256)
+last_point = 1
+metadata/_custom_type_script = "uid://dgxd1fbsca2l5"

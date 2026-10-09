@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://dlsky7o40cn7h"]
 
+[ext_resource type="Texture2D" uid="uid://dx6yquvthre1f" path="res://constellation/star_2.png" id="1_4wts0"]
+[ext_resource type="Script" uid="uid://bukthvcwg3xv" path="res://constellation/star.gd" id="1_qpfl7"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_65f5o"]
 radius = 20.0
 
 [node name="Star" type="Area2D" unique_id=365057882]
+script = ExtResource("1_qpfl7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2143014057]
 shape = SubResource("CircleShape2D_65f5o")
 
-[node name="Label" type="Label" parent="." unique_id=559542312]
-offset_left = -19.0
-offset_top = -13.0
-offset_right = 21.0
-offset_bottom = 10.0
-text = "sta"
-horizontal_alignment = 1
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=810917984]
+position = Vector2(1, 0)
+scale = Vector2(0.3684211, 0.36842105)
+texture = ExtResource("1_4wts0")

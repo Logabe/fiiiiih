@@ -1,21 +1,56 @@
 [gd_scene format=3 uid="uid://dcp3dem3wpldw"]
 
 [ext_resource type="Script" uid="uid://bh4ywp3rtoent" path="res://constellation/constellation.gd" id="1_4v48o"]
+[ext_resource type="Script" uid="uid://dgxd1fbsca2l5" path="res://constellation/pattern.gd" id="2_kksla"]
+[ext_resource type="Resource" uid="uid://bq304slphbfv0" path="res://constellation/patterns/delphinus.tres" id="3_7v1li"]
 
-[node name="Constellation" type="Node2D" unique_id=1362579977]
-script = ExtResource("1_4v48o")
+[sub_resource type="LabelSettings" id="LabelSettings_4v48o"]
+font_size = 32
+font_color = Color(0.9607843, 0.7254902, 0.20784314, 1)
+outline_size = 3
+outline_color = Color(0.9607843, 0.6627451, 0.2784314, 1)
 
-[node name="Backdrop" type="ColorRect" parent="." unique_id=901419387]
-z_index = -1
+[node name="Constellation" type="Control" unique_id=1474401824]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4v48o")
+patterns = Dictionary[String, ExtResource("2_kksla")]({
+"delphinus": ExtResource("3_7v1li")
+})
+
+[node name="Reel" type="Line2D" parent="." unique_id=1989771868]
+width = 2.0
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1628883100]
+visible = false
+points = PackedVector2Array(749, 527, 670, 291, 627, 190, 502, 173, 560, 256)
+closed = true
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=901419387]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0.1254902)
 
-[node name="Reel" type="Line2D" parent="." unique_id=1989771868]
-width = 2.0
+[node name="Label" type="Label" parent="." unique_id=1468269791]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -333.5
+offset_top = 25.0
+offset_right = 333.5
+offset_bottom = 70.0
+grow_horizontal = 2
+text = "Connect the stars in the order they appear!"
+label_settings = SubResource("LabelSettings_4v48o")
