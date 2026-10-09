@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cp7mv8t5wvaol"]
+
+[ext_resource type="Texture2D" uid="uid://c383mfjh35hy7" path="res://assets/dolphin.webp" id="1_xqu5o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t1rg7"]
+radius = 83.0
+height = 628.0
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=833807290]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2050170727]
+rotation = 6.2831855
+scale = Vector2(-0.92, -1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=947123590]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_t1rg7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D" unique_id=841180140]
+rotation = -1.5707964
+texture = ExtResource("1_xqu5o")

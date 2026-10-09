@@ -12,7 +12,6 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.y += (delta*5)
 	
 	if Input.is_action_just_pressed("left_click"):
 		initialClickPos = get_viewport().get_mouse_position()
