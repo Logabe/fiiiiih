@@ -36,6 +36,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if can_draw:
+		$GPUParticles2D.position = get_global_mouse_position() + Vector2(randf_range(-10, 10), randf_range(-10, 10))
 		_set_end_pos(get_global_mouse_position())
 
 func add_point():
@@ -76,7 +77,7 @@ func _mouse_entered(node: Area2D):
 		
 		_set_end_pos(node.position)
 		var tween = create_tween()
-		tween.tween_interval(0.5)
+		tween.tween_interval(1)
 		tween.tween_callback(lost.emit)
 		tween.tween_callback(queue_free)
 

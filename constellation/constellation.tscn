@@ -3,12 +3,27 @@
 [ext_resource type="Script" uid="uid://bh4ywp3rtoent" path="res://constellation/constellation.gd" id="1_4v48o"]
 [ext_resource type="Script" uid="uid://dgxd1fbsca2l5" path="res://constellation/pattern.gd" id="2_kksla"]
 [ext_resource type="Resource" uid="uid://bq304slphbfv0" path="res://constellation/patterns/delphinus.tres" id="3_7v1li"]
+[ext_resource type="Texture2D" uid="uid://d2k3yhchd02dd" path="res://constellation/star_3.png" id="4_mf4yv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4v48o"]
 font_size = 32
 font_color = Color(0.9607843, 0.7254902, 0.20784314, 1)
 outline_size = 3
 outline_color = Color(0.9607843, 0.6627451, 0.2784314, 1)
+
+[sub_resource type="Curve" id="Curve_mf4yv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.1702678, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5rmyi"]
+curve = SubResource("Curve_mf4yv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mf4yv"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 1.1
+scale_curve = SubResource("CurveTexture_5rmyi")
 
 [node name="Constellation" type="Control" unique_id=1474401824]
 layout_mode = 3
@@ -54,3 +69,11 @@ offset_bottom = 70.0
 grow_horizontal = 2
 text = "Connect the stars in the order they appear!"
 label_settings = SubResource("LabelSettings_4v48o")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1834918810]
+z_index = -1
+amount = 16
+texture = ExtResource("4_mf4yv")
+lifetime = 2.0
+randomness = 0.33
+process_material = SubResource("ParticleProcessMaterial_mf4yv")
