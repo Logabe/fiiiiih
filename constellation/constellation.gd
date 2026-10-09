@@ -62,6 +62,7 @@ func _mouse_entered(node: Area2D):
 		if connected_counter >= len(points):
 			can_draw = false
 			create_tween().tween_property(reel, "default_color", Color.GOLD, 1)
+	
 	elif node != stars[connected_counter-1]:
 		reel.default_color = Color.RED
 		can_draw = false
