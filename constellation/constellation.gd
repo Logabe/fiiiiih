@@ -5,6 +5,9 @@ extends Control
 @onready var reel = $Reel
 @export var patterns: Dictionary[String, Pattern]
 
+signal won
+signal lost
+
 var points = [] # All the points, in the order the player must link them
 var stars = []
 var added_counter = 0
@@ -61,12 +64,21 @@ func _mouse_entered(node: Area2D):
 		
 		if connected_counter >= len(points):
 			can_draw = false
-			create_tween().tween_property(reel, "default_color", Color.GOLD, 1)
-	
+			var tween = create_tween()
+			tween.tween_property(reel, "default_color", Color.GOLD, 1)
+			tween.tween_interval(0.5)
+			tween.tween_callback(won.emit)
+			tween.tween_callback(queue_free)
+			
 	elif node != stars[connected_counter-1]:
 		reel.default_color = Color.RED
 		can_draw = false
+		
 		_set_end_pos(node.position)
+		var tween = create_tween()
+		tween.tween_interval(0.5)
+		tween.tween_callback(lost.emit)
+		tween.tween_callback(queue_free)
 
 func twinkle(last_point: int):
 	var tween = create_tween()
